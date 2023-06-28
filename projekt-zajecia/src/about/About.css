@@ -1,0 +1,23 @@
+.about_top{
+    background-color: rgb(198, 134, 134);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_bottom{
+    background-color: rgb(151, 134, 198);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutpsp_logo{
+    width: 100px;
+}
+
+.aboutwat_logo{
+    width: 100px;
+}

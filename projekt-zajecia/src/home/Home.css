@@ -1,0 +1,120 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.home_main{
+    background-color: black;
+
+}
+
+.home_title{
+    font-size: 80px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #ffaf5a, #ed8f2a,#a73d0c, #5e3306);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: 80px;
+    
+}
+
+.subtitle_title{
+    font-size: 36px;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    line-height: 42px;
+    margin: 1vh;
+}
+
+.home_button{
+    margin: 1vh;
+    width: 200px;
+    height: 80px ;
+    font-size:  28px;
+    background-color: #eb1005;
+    border-radius: 5px;
+    border-color: transparent;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 400;
+    align-self: center;
+}
+
+.home_button:hover{
+    
+    background-color: lightcoral;
+    scale: 1.03;
+    border-radius: 10px;
+    color:white;
+
+}
+.home_top{
+    background-color: black;
+    min-height: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.home_about{
+    margin: 1vh;
+    width: 150px;
+    height: 50px ;
+    font-size:  20px;
+    background-color: #599cd3;
+    border-radius: 5px;
+    border-color: transparent;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+
+
+.home_about:hover{
+
+background-color: lightcoral;
+scale: 1.03;
+border-radius: 10px;
+color:white;
+
+}
+
+.home_bottom{
+    /*background-color: red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.home_left{
+    background-color: black;
+    width: 40vw;
+}
+.home_right{
+   /* background-color: blue; */
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+.home_logo {
+    width: 100px;
+    display: flex;
+    align-self: flex-end;
+}
+
+.home_about
+@media screen and (max-width:1100px){
+    .home_bottom{
+        flex-direction: column;
+    }
+}
