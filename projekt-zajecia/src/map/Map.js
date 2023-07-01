@@ -7,7 +7,7 @@ import MarkerPlacement from './MarkerPlacement';
 import axios from 'axios';
 
 function Map() {
-    const [budynki, setBudynki] = useState()
+    const [budynkii, setBudynki] = useState()
 
     const makePopup = (feature, layer) => {
         if (feature) {
@@ -26,7 +26,7 @@ function Map() {
 
         const getData = () => {
             axios
-                .get(`http://localhost:8080/geoserver/prgeo/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prgeo%3Abudynki&maxFeatures=50&outputFormat=application%2Fjson`) // tutaj uważać na link
+                .get(`http://localhost:8080/geoserver/prgeo/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prgeo%3Abudynkii&maxFeatures=50&outputFormat=application%2Fjson`) // tutaj uważać na link
                 .then(
                     (dane) => {
                         console.log(dane.data);
@@ -68,23 +68,12 @@ function Map() {
                         />
                     </LayersControl.BaseLayer>
 
-                    <LayersControl.BaseLayer name='Countries WMS' >
-                        <WMSTileLayer
-                            layers='countries'
-                            url="http://localhost:8080/geoserver/ne/wms?" // tutaj uważać na link
-                        />
-                    </LayersControl.BaseLayer>
-                    <LayersControl.BaseLayer name='Budynki WMS' >
-                        <WMSTileLayer
-                            layers='budynki'
-                            url="http://localhost:8080/geoserver/ne/wms?" // tutaj uważać na link
-                        />
-                    </LayersControl.BaseLayer>
+
 
 
 
                     <LayersControl.Overlay name='Budynki WFS' >
-                        {budynki ? <GeoJSON data={budynki} onEachFeature={makePopup} /> : ""}
+                        {budynkii ? <GeoJSON data={budynkii} onEachFeature={makePopup} /> : ""}
                     </LayersControl.Overlay>
 
 

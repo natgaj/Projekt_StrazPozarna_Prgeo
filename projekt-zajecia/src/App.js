@@ -4,7 +4,7 @@ import Home from "./home/Home";
 import Map from "./map/Map";
 import Services from "./services/Services";
 import Weather from "./weather/Weather";
-import BspReview from "./bspLib/BspReview";
+import JrgReview from "./bspLib/JrgReview";
 import About from "./about/About";
 
 const router = createBrowserRouter([
@@ -39,17 +39,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/services/bazabsp",
-    element: <BspReview />,
+    element: <JrgReview />,
     errorElement: <h1> Nie działa </h1>,
 
   },
 
-  {
-    path: "/",
-    element: <home_about />,
-    errorElement: <h1> Nie działa </h1>,
 
-  },
 ]);
 
 function App() {

@@ -1,0 +1,27 @@
+.lib_tilte{
+    font-size: 45px;
+    font-weight: 600;
+    
+    color: wheat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    line-height: 80px;
+    margin-left: 45px;
+
+}
+ .lib_main{
+    background: black;
+ }
+
+ .custom_table{
+    
+    background-image: linear-gradient(to left, #a73d0c, #ed8f2a,#ffaf5a, #ed8f2a, #a73d0c );
+ }
+
+ .table_cell{
+    font-size: xx-large;
+    font: 1em sans-serif;
+    font-weight: bold;
+    color: red;
+ }
+
