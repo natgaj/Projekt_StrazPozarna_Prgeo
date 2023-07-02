@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Circle, Marker, Popup, useMapEvent } from 'react-leaflet'
-import { dronIcon } from './Icon'
+import { fireIcon } from './Icon'
 
 function MarkerPlacement() {
     const [position, setPosition] = useState(null)
@@ -20,7 +20,7 @@ function MarkerPlacement() {
 
     return position === null ? null : (
         <div>
-            <Marker icon={dronIcon} position={position}>
+            <Marker icon={fireIcon} position={position}>
                 <Popup >
                     Podaj masę ładunku wybuchowego w kg
                     <input

@@ -5,6 +5,7 @@
 .services_main{
     background-color: black;
 
+
 }
 
 .services_title{
@@ -23,59 +24,67 @@
     font-size: 36px;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: rgb(69, 10, 10);
     font-weight: 400;
     line-height: 42px;
-    margin: 5vh;
+ 
 }
 
 .services_button{
-    margin: 10vh;
+    /* margin: 10vh; */
     width: 260px;
     height: 80px ;
     font-size:  28px;
-    background-color: white;
+    background-color: rgb(214, 16, 16);
     border-radius: 5px;
     border-color: transparent;
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: white;
     font-weight: 400;
     
 }
 
+
 .services_button:hover{
     
-    background-color: gray;
+    background-color: rgb(255, 92, 80);
     scale: 1.03;
     border-radius: 10px;
     color:white;
-    transform: rotate(15deg);
+    transform: rotate(10deg);
 
 
 }
 .services_top{
-    background-color: gold;
+    background-color: black;
     min-height: 15vh;
+    margin-bottom: 0;
     
 
 }
 
-.services_about{
-    color:gray;
-    font-style: normal;
-    font-size: 28px;
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.services_gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
 }
+
+.services_image{
+    object-fit: cover;
+    width: 245px;
+    height: 200px;
+    margin-bottom: 10%;
+}
+  
 
 .services_bottom{
     /*background-color: red;*/
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 25vh;
 
 }
 .services_left{
@@ -87,37 +96,7 @@
     justify-content: space-around;
 
 }
-.services_right{
-   /* background-color: blue; */
-    width: 50vw;
-    display: flex;
-   
-}
-.services_logo1 {
-    width: 300px;
-    height: 200px;
-    margin: 0;
-    
-}
 
-.services_logo2 {
-    width: 300px;
-    height: 200px;
-    margin: 0;
-    
-}
-
-.services_logo3 {
-    width: 300px;
-    height: 200px;
-    margin: 0;
-}
-
-.services_logo4 {
-    width: 300px;
-    height: 200px;
-    margin: 0;
-}
 
 
 @media screen and (max-width:1100px){

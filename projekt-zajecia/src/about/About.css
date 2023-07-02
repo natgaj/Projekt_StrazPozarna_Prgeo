@@ -1,23 +1,53 @@
+.about_main{
+    background-image: linear-gradient(to left, #a73d0c, #ed8f2a,#ffaf5a, #ed8f2a, #a73d0c );
+}
+
 .about_top{
-    background-color: rgb(198, 134, 134);
+    background-color:black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: 5%;
 }
 
 .about_bottom{
-    background-color: rgb(151, 134, 198);
+    background-color: black;
+    background-image: url(https://us.123rf.com/450wm/kesu87/kesu871307/kesu87130700154/20736559-p%C5%82omienie-ognia-na-czarnym-tle.jpg);
+    background-size:cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
+    margin-top: 0%;
 }
 
 .aboutpsp_logo{
-    width: 100px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 200px;
 }
 
 .aboutwat_logo{
-    width: 100px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 300px;
+}
+
+.aboutprojekt_tekst{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 1.5;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.aboutwykonawca_tekst{
+    color: white;
+    font-size: 20px;
+    font-weight:300;
+    text-align: center;
+    line-height: 1.5;
 }

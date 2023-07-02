@@ -1,12 +1,12 @@
 import L from 'leaflet';
-import dron from './dron.png.png'
+import fire from './fireicon.png'
 
 const LeafIcon = L.Icon.extend({
     options: {
-        iconSize: [140, 100],
-        iconAnchor: [70, 25],
+        iconSize: [50, 50],
+        iconAnchor: [25, 50],
         tooltipAnchor: [0, 0]
     }
 });
 
-export const dronIcon = new LeafIcon({ iconUrl: dron })
+export const fireIcon = new LeafIcon({ iconUrl: fire })

@@ -4,7 +4,7 @@ import Home from "./home/Home";
 import Map from "./map/Map";
 import Services from "./services/Services";
 import Weather from "./weather/Weather";
-import JrgReview from "./bspLib/JrgReview";
+import JrgReview from "./jrgLib/JrgReview";
 import About from "./about/About";
 
 const router = createBrowserRouter([

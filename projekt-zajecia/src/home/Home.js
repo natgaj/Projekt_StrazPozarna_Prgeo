@@ -19,9 +19,9 @@ function Home() {
             </div>
             <div className='home_bottom'>
                 <div className='home_left'>
-                    <img className="services_logo1" src={zdjecie1} alt="logo1" />{" "}
-                    <img className="services_logo2" src={zdjecie2} alt="logo2" />
-                    <img className="services_logo3" src={zdjecie3} alt="logo3" />{" "}
+                    <img className="services_logo" src={zdjecie1} alt="logo1" />{" "}
+                    <img className="services_logo" src={zdjecie2} alt="logo2" />
+                    <img className="services_logo" src={zdjecie3} alt="logo3" />{" "}
                 </div>
 
                 <div className='home_right'>

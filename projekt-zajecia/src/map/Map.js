@@ -1,36 +1,42 @@
 import React, { useEffect, useState } from 'react'
 import './Map.css'
-import { MapContainer, TileLayer, LayersControl, WMSTileLayer, GeoJSON } from 'react-leaflet'
+import { MapContainer, TileLayer, LayersControl, WMSTileLayer, GeoJSON, Marker } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
 
 import MarkerPlacement from './MarkerPlacement';
 import axios from 'axios';
+import { fireIcon } from './Icon';
 
 function Map() {
-    const [budynkii, setBudynki] = useState()
-
+    const [jgrbudynki, setJgrbudynki] = useState()
     const makePopup = (feature, layer) => {
         if (feature) {
             layer.bindPopup(
-                `<h1> NAZWA OBIEKTU </h1>
-            ${feature.properties.nazwa}`
+                `<h1>${feature.properties.JRG}</h1>
+                Specjalizacja: ${feature.properties.specjaliza}
+                <p> Dowódca JRG: ${feature.properties.dowodcaJRG} </p>
+                <p> Zastępca Dowódcy JRG: ${feature.properties.zastepcado} </p>
+                <p> Adres: ul. ${feature.properties.ulica}, ${feature.properties.kodpocztow} ${feature.properties.miasto}</p>
+                <p> Telefon: ${feature.properties.telefon} </p>
+                <p> Email: ${feature.properties.email} </p>
+            `
             )
         }
 
+
     }
-
-
-
 
     useEffect(() => {
 
         const getData = () => {
             axios
-                .get(`http://localhost:8080/geoserver/prgeo/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prgeo%3Abudynkii&maxFeatures=50&outputFormat=application%2Fjson`) // tutaj uważać na link
+                .get(`http://localhost:8080/geoserver/prgeo/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=prgeo%3Ajgrbudynki&maxFeatures=50&outputFormat=application%2Fjson`) // tutaj uważać na link
                 .then(
                     (dane) => {
                         console.log(dane.data);
-                        setBudynki(dane.data)
+                        setJgrbudynki(dane.data)
 
                     })
                 .catch(
@@ -47,7 +53,7 @@ function Map() {
         <div className='map_main'>
             <MapContainer
                 center={[52.232222, 21.008333]}
-                zoom={15}
+                zoom={12}
             >
 
                 <LayersControl position="topright">
@@ -68,22 +74,26 @@ function Map() {
                         />
                     </LayersControl.BaseLayer>
 
-
-
-
-
-                    <LayersControl.Overlay name='Budynki WFS' >
-                        {budynkii ? <GeoJSON data={budynkii} onEachFeature={makePopup} /> : ""}
+                    <LayersControl.Overlay name='Budynki JRG'>
+                        {jgrbudynki ? (
+                            <GeoJSON
+                                data={jgrbudynki}
+                                onEachFeature={makePopup}
+                                pointToLayer={(feature, latlng) => {
+                                    return L.marker(latlng, { icon: fireIcon });
+                                }}
+                            />
+                        ) : (
+                            ""
+                        )}
                     </LayersControl.Overlay>
 
 
-
-
-                    <MarkerPlacement />
                 </LayersControl>
+
+
+
             </MapContainer>
-
-
 
         </div>
     )
