@@ -5,7 +5,6 @@ import zdjecie from './PSPlogo.png'
 import zdjecie1 from "./straż1.jpg";
 import zdjecie2 from "./straż2.jpg";
 import zdjecie3 from "./straż3.jpg";
-import zdjecie4 from "./straż4.png";
 import { Link } from 'react-router-dom'
 
 

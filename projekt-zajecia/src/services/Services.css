@@ -4,8 +4,6 @@
 }
 .services_main{
     background-color: black;
-
-
 }
 
 .services_title{
@@ -16,8 +14,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     margin-left: 35%;
-
-    
 }
 
 .services_subtitle{
@@ -27,7 +23,6 @@
     color: rgb(69, 10, 10);
     font-weight: 400;
     line-height: 42px;
- 
 }
 
 .services_button{
@@ -42,7 +37,6 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-weight: 400;
-    
 }
 
 
@@ -53,15 +47,11 @@
     border-radius: 10px;
     color:white;
     transform: rotate(10deg);
-
-
 }
 .services_top{
     background-color: black;
     min-height: 15vh;
     margin-bottom: 0;
-    
-
 }
 
 .services_gallery{
@@ -80,7 +70,6 @@
   
 
 .services_bottom{
-    /*background-color: red;*/
     display: flex;
     justify-content: center;
     align-items: center;

@@ -13,13 +13,7 @@
 
 }
 .home_title{
-    /* font-size: 80px;
-    font-weight: 600;
-    background-image: linear-gradient(to left, #ffaf5a, #ed8f2a,#a73d0c, #5e3306);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    line-height: 80px; */
+
     background-image: url(https://img.redro.pl/obrazy/plomien-ognia-plomien-tekstura-tlo-700-132874747.jpg);
     background-clip: text;
     -webkit-background-clip: text;
@@ -85,7 +79,6 @@
     right: 10px;
 
 }
-
 
 
 .home_about:hover{
